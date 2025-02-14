@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/') 
 def calculator():
-    return render_template("index.html")
+    return render_template("index2.html")
 
 @app.route('/calculate', methods = ['POST']) 
 def calculate():
@@ -24,7 +24,7 @@ def calculate():
     else :
         result = "Error : Invalid operation"
     
-    return render_template('output.html', result = result)
+    return render_template('index3.html', result = result)
 
 if __name__ == "__main__" :
     app.run(debug = True)
